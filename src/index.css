@@ -1,13 +1,90 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cards {
+  font-size: 14px;
+  display: grid;
+  background: grey;
+  height: 100vw;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vh;
+  gap: 1px;
+  padding: 1px;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-areas:
+    "id21 id22 id23 id24 id25 id26 id27 id28 id29 id30 id31"
+    "id20 . . . . . . . . . id32"
+    "id19 . . . . . . . . . id33"
+    "id18 . . . . . . . . . id34"
+    "id17 . . . . . . . . . id35"
+    "id16 . . . . . . . . . id36"
+    "id15 . . . . . . . . . id37"
+    "id14 . . . . . . . . . id38"
+    "id13 . . . . . . . . . id39"
+    "id12 . . . . . . . . . id40"
+    "id11 id10 id9 id8 id7 id6 id5 id4 id3 id2 id1";
+}
+
+.card {
+  background-color: white;
+  display: flex;
+}
+
+.card__header {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 20%;
+}
+
+.card__text {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.players {
+  display: grid;
+  grid-template-rows: 120px 120px 120px; 
+  grid-template-columns: 120px 120px 120px;
+  grid-template-areas: 
+    "id1 id2 id3"
+    "id5 . id4"
+    "id8 id7 id6";
+  background: grey;
+  gap: 1px;
+  padding: 1px;
+}
+
+.player {
+  gap: 8px;
+  display: flex;
+  padding: 8px;
+}
+
+.player__avatar {
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+}
+
+.player__body {
+  display: flex;
+  flex-direction: column;
 }
